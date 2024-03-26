@@ -4,7 +4,9 @@ import 'package:snaapro/mudeuls/message%20screen/massenger_screen.dart';
 import 'package:snaapro/mudeuls/user/user_page.dart';
 import 'package:snaapro/search_page.dart';
 
-import '../setting_page/setting_page.dart';
+import '../../mudeuls/setting_page/setting_page.dart';
+
+
 
 class HomeLayout extends StatefulWidget {
 
@@ -24,117 +26,7 @@ class _HomeLayoutState extends State<HomeLayout> {
   int currentindex=0;
   late List screens=[
     HomePage(),
-  Drawer(
-  width: 200,
-  backgroundColor: Colors.grey.shade300,
-
-  child: ListView(
-  children: [
-  Container(
-  height: 150.0,
-  child: DrawerHeader(
-
-  child: Row(
-  crossAxisAlignment: CrossAxisAlignment.start,
-  children: [
-  Expanded(
-  child: Icon(Icons.settings,
-  color: Colors.grey,
-  size: 50,),
-  ),
-  Expanded(
-  child: Align(
-  alignment: Alignment.topCenter,
-  child: Text('الاعدادات',
-  style: TextStyle(
-  fontSize: 20,
-  fontWeight: FontWeight.bold,
-  ),),
-  ),
-  ),
-  ],
-  )
-  ),
-  ),
-  ListTile(
-  onTap: (){},
-  title: Container(
-  decoration: BoxDecoration(
-  shape: BoxShape.rectangle,
-  border: Border.all(
-  color: Colors.grey,
-  width: 2.0,
-  ),
-  ),
-
-  child: Padding(
-  padding: const EdgeInsets.all(8.0),
-  child: Row(
-  mainAxisAlignment: MainAxisAlignment.center,
-  children: [
-  Text('حالة التفرغ',
-  style: TextStyle(
-  fontSize: 15,
-  color: Colors.grey,
-  ),),
-  ],
-  ),
-  ),
-  ),
-  ),
-  ListTile(
-  onTap: (){},
-  title: Container(
-  decoration: BoxDecoration(
-  shape: BoxShape.rectangle,
-  border: Border.all(
-  color: Colors.grey,
-  width: 2.0,
-  ),
-  ),
-  child: Padding(
-  padding: const EdgeInsets.all(8.0),
-  child: Row(
-  mainAxisAlignment: MainAxisAlignment.center,
-  children: [
-  Text('الاقتراحات',
-  style: TextStyle(
-  fontSize: 15,
-  color: Colors.grey,
-  ),)
-  ],
-  ),
-  ),
-  ),
-  ),
-  ListTile(
-  onTap: (){},
-  title: Container(
-  decoration: BoxDecoration(
-  shape: BoxShape.rectangle,
-  border: Border.all(
-  color: Colors.grey,
-  width: 2.0,
-  ),
-  ),
-  child: Padding(
-  padding: const EdgeInsets.all(8.0),
-  child: Row(
-  mainAxisAlignment: MainAxisAlignment.center,
-  children: [
-  Text('تسجيل الخروج',
-  style: TextStyle(
-  fontSize: 15,
-  color: Colors.grey,
-  ),)
-  ],
-  ),
-  ),
-  ),
-  ),
-  ],
-  ),
-  ),
+    SettingPage(),
     SearchPage(),
     MessengerDesighn(),
     UserPage(username:widget.username,job:widget.job,city:widget.city ),
@@ -181,6 +73,7 @@ class _HomeLayoutState extends State<HomeLayout> {
 
           ),
           BottomNavigationBarItem(
+
             icon: Icon(Icons.search,
               color: c,),
             label:'search',
@@ -199,7 +92,7 @@ class _HomeLayoutState extends State<HomeLayout> {
         ],
 
       ),
-      drawer: SettingPage(),
+
     );
 
 

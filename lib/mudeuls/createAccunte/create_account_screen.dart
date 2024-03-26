@@ -12,7 +12,7 @@ class CreateAccount extends StatefulWidget {
 class _CreateAccountState extends State<CreateAccount> {
   Color c=Color.fromRGBO(240, 240, 240, 1);
   Color co=Color.fromRGBO(255,116,49,1);
-   String name='',emile='',password='',day='',month='',year='';
+
    bool isPasswordValid=true;
    bool isEmailValid = true;
   var emailCont=TextEditingController();
@@ -96,7 +96,7 @@ class _CreateAccountState extends State<CreateAccount> {
                        controller: nameCont,
 
                        onFieldSubmitted: (val){
-                         name=val;
+                         print(val);
                        },
                        decoration: InputDecoration(
                          fillColor:Color.fromRGBO(225, 225, 225, 1),
@@ -265,7 +265,7 @@ class _CreateAccountState extends State<CreateAccount> {
                       child: TextFormField(
                        controller: dayCount,
                         onFieldSubmitted: (val){
-                          day=val;
+                          print(val);
                         },
                         keyboardType: TextInputType.number,
                         textAlign: TextAlign.center,
@@ -298,7 +298,7 @@ class _CreateAccountState extends State<CreateAccount> {
                       child: TextFormField(
                         controller: monthCount,
                         onFieldSubmitted: (val){
-                          month=val;
+                          print(val);
                         },
                         keyboardType: TextInputType.number,
                         textAlign: TextAlign.center,
@@ -329,7 +329,7 @@ class _CreateAccountState extends State<CreateAccount> {
                       child: TextFormField(
                         controller: yearCount,
                         onFieldSubmitted: (val){
-                          year=val;
+                          print(val);
                         },
                         keyboardType: TextInputType.number,
                         textAlign: TextAlign.center,

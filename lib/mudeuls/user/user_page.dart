@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:snaapro/mudeuls/home/home_page.dart';
 import 'package:snaapro/search_page.dart';
-import 'package:snaapro/layout/setting_page/setting_page.dart';
+import 'package:snaapro/mudeuls/setting_page/setting_page.dart';
 
 class UserPage extends StatefulWidget {
   final String username;
