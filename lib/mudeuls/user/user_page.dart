@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:snaapro/mudeuls/chat/chat_screen.dart';
 import 'package:snaapro/mudeuls/home/home_page.dart';
-import 'package:snaapro/search_page.dart';
+import 'package:snaapro/mudeuls/search_screen/search_page.dart';
 import 'package:snaapro/mudeuls/setting_page/setting_page.dart';
 
 class UserPage extends StatefulWidget {
@@ -77,20 +78,25 @@ class _UserPageState extends State<UserPage> {
                         crossAxisAlignment: CrossAxisAlignment.end,
 
                         children: [
+                          // IconButton(
+                          //     onPressed: (){},
+                          //     icon:CircleAvatar(
+                          //       radius: 15.0,
+                          //       backgroundColor: Colors.deepPurpleAccent,
+                          //       child: Icon(
+                          //         Icons.edit,
+                          //         size: 16.0,
+                          //         color: Colors.white,
+                          //       ),
+                          //     )
+                          // ),
                           IconButton(
-                              onPressed: (){},
-                              icon:CircleAvatar(
-                                radius: 15.0,
-                                backgroundColor: Colors.deepPurpleAccent,
-                                child: Icon(
-                                  Icons.edit,
-                                  size: 16.0,
-                                  color: Colors.white,
-                                ),
-                              )
-                          ),
-                          IconButton(
-                              onPressed: (){},
+                              onPressed:(){
+                                setState(() {
+
+                                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => ChatsScreen()));
+                                });
+                              },
                               icon:CircleAvatar(
                                 radius: 15.0,
                                 backgroundColor: Colors.deepPurpleAccent,
@@ -120,81 +126,81 @@ class _UserPageState extends State<UserPage> {
                           Text(
                               '${widget.job} -${widget.city}',
                           style: TextStyle(
-                            fontSize: 11,
+                            fontSize: 18,
                             color: Colors.grey,
                           ),),
                           SizedBox(
                             height: 20,
                           ),
-                          SingleChildScrollView(
-                            scrollDirection: Axis.horizontal,
-                            child: Row(
-
-
-                              children: [
-                                IconButton(
-
-                                  onPressed: () {
-                                    setState(() {
-                                      stareLight[0] = !stareLight[0];
-                                    });
-                                  },
-
-                                  icon: Icon(
-                                    Icons.star,
-                                    size:size,
-                                    color:stareLight[0]? Colors.yellow:Colors.grey,),
-                                ),
-                                IconButton(
-
-                                  onPressed: () {
-                                    setState(() {
-                                      stareLight[1]= !stareLight[1];
-                                    });
-                                  },
-                                  icon: Icon(
-                                    Icons.star,
-                                    size:size,
-                                    color:stareLight[1]? Colors.yellow:Colors.grey,),
-                                ),
-                                IconButton(
-
-                                  onPressed: () {
-                                    setState(() {
-                                      stareLight[2]= !stareLight[2];
-                                    });
-                                  },
-                                  icon: Icon(Icons.star,
-                                    size:size,
-                                    color:stareLight[2]? Colors.yellow:Colors.grey,),
-                                ),
-                                IconButton(
-
-                                  onPressed: () {
-                                    setState(() {
-                                      stareLight[3]= !stareLight[3];
-                                    });
-                                  },
-                                  icon: Icon(Icons.star,
-                                    size:size,
-                                    color:stareLight[3]? Colors.yellow:Colors.grey,),
-                                ),
-                                IconButton(
-
-                                  onPressed: () {
-                                    setState(() {
-                                      stareLight[4]= !stareLight[4];
-                                    });
-                                  },
-                                  icon: Icon(Icons.star,
-                                    size:size,
-                                    color:stareLight[4]? Colors.yellow:Colors.grey,),
-                                ),
-
-
-                              ],
-                            ),
-                          ),
+                          // SingleChildScrollView(
+                          //   scrollDirection: Axis.horizontal,
+                          //   child: Row(
+                          //
+                          //
+                          //     children: [
+                          //       IconButton(
+                          //
+                          //         onPressed: () {
+                          //           setState(() {
+                          //             stareLight[0] = !stareLight[0];
+                          //           });
+                          //         },
+                          //
+                          //         icon: Icon(
+                          //           Icons.star,
+                          //           size:size,
+                          //           color:stareLight[0]? Colors.yellow:Colors.grey,),
+                          //       ),
+                          //       IconButton(
+                          //
+                          //         onPressed: () {
+                          //           setState(() {
+                          //             stareLight[1]= !stareLight[1];
+                          //           });
+                          //         },
+                          //         icon: Icon(
+                          //           Icons.star,
+                          //           size:size,
+                          //           color:stareLight[1]? Colors.yellow:Colors.grey,),
+                          //       ),
+                          //       IconButton(
+                          //
+                          //         onPressed: () {
+                          //           setState(() {
+                          //             stareLight[2]= !stareLight[2];
+                          //           });
+                          //         },
+                          //         icon: Icon(Icons.star,
+                          //           size:size,
+                          //           color:stareLight[2]? Colors.yellow:Colors.grey,),
+                          //       ),
+                          //       IconButton(
+                          //
+                          //         onPressed: () {
+                          //           setState(() {
+                          //             stareLight[3]= !stareLight[3];
+                          //           });
+                          //         },
+                          //         icon: Icon(Icons.star,
+                          //           size:size,
+                          //           color:stareLight[3]? Colors.yellow:Colors.grey,),
+                          //       ),
+                          //       IconButton(
+                          //
+                          //         onPressed: () {
+                          //           setState(() {
+                          //             stareLight[4]= !stareLight[4];
+                          //           });
+                          //         },
+                          //         icon: Icon(Icons.star,
+                          //           size:size,
+                          //           color:stareLight[4]? Colors.yellow:Colors.grey,),
+                          //       ),
+                          //
+                          //
+                          //     ],
+                          //   ),
+                          // ),
                         ],
                       ),
                     ),
