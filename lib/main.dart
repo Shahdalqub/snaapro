@@ -8,7 +8,7 @@ import 'package:snaapro/mudeuls/setting_page/setting_page.dart';
 
 
 import 'layout/home_layout/home_layout.dart';
-/////////
+//hi every one
 void main() {
   runApp(MyApp());
 
