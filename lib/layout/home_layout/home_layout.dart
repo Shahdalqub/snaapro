@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:snaapro/mudeuls/chat/chat_screen.dart';
 import 'package:snaapro/mudeuls/home/home_page.dart';
 import 'package:snaapro/mudeuls/message%20screen/massenger_screen.dart';
 import 'package:snaapro/mudeuls/user/user_page.dart';
-import 'package:snaapro/search_page.dart';
+import 'package:snaapro/mudeuls/search_screen/search_page.dart';
 
 import '../../mudeuls/setting_page/setting_page.dart';
 
@@ -28,7 +29,7 @@ class _HomeLayoutState extends State<HomeLayout> {
     HomePage(),
     SettingPage(),
     SearchPage(),
-    MessengerDesighn(),
+    ChatsScreen(),
     UserPage(username:widget.username,job:widget.job,city:widget.city ),
   ];
   List<String> label=[

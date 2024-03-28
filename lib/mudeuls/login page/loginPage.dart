@@ -192,11 +192,11 @@ class _loginPage  extends State<loginPage > {
                           });
                          if(login.currentState!.validate()){
                            login.currentState!.save();
-                          //في هذا المكان سيتم كتابة كود ربط مع الداتا بيس لفحص اذا الايميل وكلمة السر صحيحات محفوظات في متفير email&Password
-                         }
-                         else{
-                           print("not ");
-                         }
+                         //  //في هذا المكان سيتم كتابة كود ربط مع الداتا بيس لفحص اذا الايميل وكلمة السر صحيحات محفوظات في متفير email&Password
+                          }
+                         // else{
+                         //   print("not ");
+                         // }
                         },
                         child: const Text("تسجيل الدخول", style: TextStyle(
                             fontSize: 28,

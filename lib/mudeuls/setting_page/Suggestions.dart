@@ -12,7 +12,8 @@ class  Suggest_page extends StatelessWidget {
       backgroundColor: Color.fromRGBO(234, 234, 234, 1),
     title: Align(
       alignment: Alignment.center,
-      child: Text('الاقتراحات',
+      child: Text(
+        'الاقتراحات',
       style: TextStyle(
         fontWeight: FontWeight.bold,
         fontSize: 20.0,
