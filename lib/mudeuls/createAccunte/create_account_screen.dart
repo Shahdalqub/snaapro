@@ -30,6 +30,7 @@ class _CreateAccountState extends State<CreateAccount> {
   //
   // var yearCount=TextEditingController();
    String gender='' ;
+  String worlker='' ;
    String? valueChooseCity;
   final  listCity=[
 "المدينة","طولكرم","الخليل","بيت لحم","جنين","قلقيلية","طوباس","رام الله","نابلس","القدس"
@@ -183,15 +184,18 @@ class _CreateAccountState extends State<CreateAccount> {
                         ),
                       ),
                       Expanded(
-                        child: Align(
-                          alignment: Alignment.topRight,
-                          child: Text(
-                            'البريد الالكتروني',
-                            style: TextStyle(
-                                color:co,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 20.0
+                        child: SingleChildScrollView(
+                          scrollDirection: Axis.horizontal,
+                          child: Align(
+                            alignment: Alignment.topRight,
+                            child: Text(
+                              'البريد الالكتروني',
+                              style: TextStyle(
+                                  color:co,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 20.0
 
+                              ),
                             ),
                           ),
                         ),
@@ -465,6 +469,44 @@ class _CreateAccountState extends State<CreateAccount> {
                       ),
                     ],
                   ),//job &city
+                  SizedBox(
+                    height: 20.0,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Container(
+                        width: 150,
+                        color: c,
+                        child: RadioListTile(
+                            title: Text('عامل'),
+                            value: 'عامل',
+                            groupValue: worlker,
+                            onChanged:(value){setState(() {
+                              worlker=value.toString();
+                            });}
+
+                        ),
+                      ),
+                      SizedBox(
+                        width: 20.0,
+                      ),
+                      Container(
+                        width: 150,
+                        color: c,
+                        child: RadioListTile(
+                            title: Text('صاحب عمل'),
+                            value: 'صاحب عمل',
+                            groupValue: worlker,
+                            onChanged:(value){setState(() {
+                              worlker=value.toString();
+                            });}
+
+                        ),
+                      ),
+
+                    ],
+                  ),
                   SizedBox(
                     height: 20.0,
                   ),
