@@ -11,7 +11,7 @@ class _SearchPageState extends State<SearchPage> {
   bool _isChecked = false;
   bool _isChecked2 = false;
   Color c=Color.fromRGBO(240, 240, 240, 1);
-  String gender='' ;
+  String worlker1 ='' ;
   String? valueChooseCity;
   final  listCity=[
     "المدينة","طولكرم","الخليل","بيت لحم","جنين","قلقيلية","طوباس","رام الله","نابلس","القدس"
@@ -173,53 +173,41 @@ class _SearchPageState extends State<SearchPage> {
               height: 40.0,
             ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              crossAxisAlignment: CrossAxisAlignment.end,
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
+                Container(
+                  width: 170,
+                  color: c,
+                  child: RadioListTile(
+                      title: Text('عامل'),
+                      value: 'عامل',
+                      groupValue: worlker1,
+                      onChanged:(value){setState(() {
+                        worlker1=value.toString();
+                      });}
 
-                Expanded(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Text('عامل',
-                        style: TextStyle(
-                          fontSize: 20.0,
-                        ),),
-                      Checkbox(
-                        value: _isChecked,
-                        onChanged: (bool? value) {
-                          setState(() {
-                            _isChecked = value!;
-                          });
-                        },
-                      ),
-                    ],
                   ),
                 ),
                 SizedBox(
                   width: 20.0,
                 ),
-                Expanded(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Text('صاحب عمل',
-                        style: TextStyle(
-                          fontSize: 20.0,
-                        ),),
-                      Checkbox(
-                        value: _isChecked2,
-                        onChanged: (bool? value) {
-                          setState(() {
-                            _isChecked2 = value!;
-                          });
-                        },
-                      ),
-                    ],
+                Container(
+                  width: 170,
+                  color: c,
+                  child: RadioListTile(
+                      title: Text('صاحب عمل'),
+                      value: 'صاحب عمل',
+                      groupValue: worlker1,
+                      onChanged:(value){setState(() {
+                        worlker1=value.toString();
+                      });}
+
                   ),
                 ),
+
               ],
-            ),
+            ),//worker
           ],
         )
 
