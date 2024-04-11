@@ -19,6 +19,17 @@ class MyApp extends StatelessWidget{
   Widget build(BuildContext context){
     return  MaterialApp(
       debugShowCheckedModeBanner:false ,
+      theme: ThemeData(
+        scaffoldBackgroundColor: Color.fromRGBO(234, 234, 234, 1),
+        appBarTheme: AppBarTheme(
+          backgroundColor:  Color.fromRGBO(234, 234, 234, 1),
+        ),
+        bottomNavigationBarTheme: BottomNavigationBarThemeData(
+          type: BottomNavigationBarType.fixed,
+          selectedItemColor: Colors.orange,
+          elevation: 20.0,
+        ),
+      ),
       home:firstPage(),
     );
   }

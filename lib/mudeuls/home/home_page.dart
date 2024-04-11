@@ -8,18 +8,16 @@ double hight=5;
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      backgroundColor: Color.fromRGBO(234, 234, 234, 1),
+      appBar: AppBar(
+        toolbarHeight: 30.0,
+      ),
       body:
 
       SingleChildScrollView(
         child: Column(
           children: [
-                   Padding(
-              padding: const EdgeInsets.only(
-                  top: 20.0,),
-              child: const Image(image: AssetImage('images/Untitled-7.png',),
-              ),
-            ),
+                   const Image(image: AssetImage('images/Untitled-7.png',),
+                   ),
             Padding(
               padding: const EdgeInsets.only(
                   right: 20.0),
