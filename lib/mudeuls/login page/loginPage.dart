@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:snaapro/mudeuls/createAccunte/create_account_screen.dart';
 
 import '../../layout/home_layout/home_layout.dart';
+import '../../shared/cubit/cubit.dart';
 
 String? email;
 String? Password;
@@ -186,7 +188,10 @@ class _loginPage  extends State<loginPage > {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => HomeLayout(username:'', job: '', city: '' ,)));
+                                  builder: (context) => HomeLayout(
+                                    username:"",
+                                    job: "",
+                                    city:  "",),));
                           setState(() {
                             colstate1 = true;
                           });
